@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
+import { View, Text, StyleSheet, TextInput, Pressable, Platform } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import Navigation, { RouteParams } from "../../navigation/Navigation";
 
@@ -42,14 +42,16 @@ const InputSearch: React.FC<InputPress> = ({}) => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical: "4%",
+        paddingVertical: Platform.OS === 'ios' ? 15 : 9,
         width: "90%",
         borderWidth: 1,
         borderRadius: 30,
         backgroundColor: "white",
+        justifyContent: 'center',
+
     },
     textInput: {
-        fontSize: 12,
+        fontSize: Platform.OS === 'ios' ? 12 : 11,
         width: "70%",
         left: "4%",
     },
@@ -58,7 +60,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         position: 'absolute',
         right: 0,
-        marginTop: 6.6,
         marginHorizontal: 10,
         borderRadius: 30,
         justifyContent: 'center',

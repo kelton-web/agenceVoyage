@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-
     styleBtn: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -41,6 +40,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         fontSize: 13,
         width: "100%",
+        textAlign: 'center',
     },
     styleBtnImage: {
         height: 15,

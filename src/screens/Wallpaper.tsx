@@ -49,8 +49,8 @@ const Wallpaper:React.FC<InterWallpaper> = ({}) => {
                </View>
                <View style={styles.containerDescription}>
                    <View style={styles.smallContainerDescription}>
-                            <DescriptionWallpaper /> 
                     </View>
+                            <DescriptionWallpaper /> 
                </View>
            </ImageBackground>
         </View>
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         flex: 0.9,
         borderRadius: 20,
-        opacity: 0.5,
+        opacity: 0.2,
         overflow: 'hidden'
     }
 })
